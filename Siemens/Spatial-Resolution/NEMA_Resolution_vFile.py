@@ -6,7 +6,7 @@ Created on Thu Sep 03 18:28:58 2015
 
 NEMA NU 2-2007
 
-Set 'PathDicom' to dir with dicom files. Can calculate FWHM of up to 3 points sources in a image.
+Set 'Dir' to path with vfiles. Sums all vfiles (typically 6) and processes all 6 points at once.
 """
 
 import numpy as np
