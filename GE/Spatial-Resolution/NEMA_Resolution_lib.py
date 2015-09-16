@@ -119,25 +119,3 @@ def Calculate_z_Resolution(MaxIndices, point, LineResponse, ConstPixelDims, Cons
     print '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
 
     return FWHM, FWHM_in_pixels, locationPercentage
-
-class InterfileHeader:
-    def __init__(self, filename):
-        self.filename = filename
-        self.tag = []
-        self.value = []
-        
-        with open(self.filename) as f:
-            for line in f:
-                line = line.strip()
-                parts = line.split("=")
-                if parts[0]:
-                    self.tag.append(parts[0])
-                    if parts[1]:
-                        self.value.append(parts[1])
-                    else:
-                        self.value.append('')
-    
-    def get(self, gettag):
-        for x in range(len(self.tag)):
-            if self.tag[x] == gettag:
-                return self.value[x]
