@@ -13,7 +13,7 @@ import dicom
 
 def diff_times_in_mins(CalTime, AcqTime):
     # caveat emptor - assumes t1 & t2 are python times, on the same day and t2 is after t1
-    t1 = datetime.datetime.strptime( str(CalTime), '%Y%m%d%H%M%S.%W').time()
+    t1 = datetime.datetime.strptime( str(CalTime), '%Y%m%d%H%M%S.%f').time()
     t2 = datetime.datetime.strptime( str(AcqTime), '%H%M%S.%W').time()
     h1, m1, s1 = t1.hour, t1.minute, t1.second
     h2, m2, s2 = t2.hour, t2.minute, t2.second
@@ -23,7 +23,7 @@ def diff_times_in_mins(CalTime, AcqTime):
 
 ###########################################################################
 
-PathDicom = "0cm Sinograms/"
+PathDicom = "10cm Sinograms/"
 #PathDicom = "10cm Sinograms/"
 
 lstFilesDCM = []  # create an empty list
@@ -54,6 +54,11 @@ print 'Rcorrj', Rcorrj
 PolyCoeff = np.polyfit([1,2,3,4,5], np.log(Rcorrj), 1)
 p = np.poly1d(PolyCoeff)
 
+Newx = np.arange(0, 6, 0.1)
+Newy = np.exp( PolyCoeff[1] ) * np.exp( PolyCoeff[0] * Newx)
+
+um = round(PolyCoeff[0] / (-2), 3)
+
 Stot = np.exp( PolyCoeff[1] ) / tracer_activity
 print 'Sensitivity =', int(Stot), 'cps/MBq'
 
@@ -61,14 +66,15 @@ plot.figure(1)
 
 # Rate vs Thickness Fit
 plot.subplot(121)
-plot.plot([1,2,3,4,5], np.log(Rcorrj), 'bs', [0, 5], [PolyCoeff[1], 5 * PolyCoeff[0] + PolyCoeff[1]])
+plot.plot([1,2,3,4,5], Rcorrj / tracer_activity, 'bs')
+plot.plot(Newx, Newy / tracer_activity)
 plot.title('Rate vs Thickness Fit')
 plot.xlabel('Number of Sleeves')
-plot.ylabel('Ln(Rcorr,j)')
+plot.ylabel('cps/MBq')
 plot.xlim([0, 6])
 
-plot.annotate('Stot = '+str(int(Stot))+' cps/MBq', xy=(0, PolyCoeff[1]), xytext=(0.5, np.log(Rcorrj)[4]))
-plot.annotate(p, xy=(0, PolyCoeff[1]), xytext=(2, np.log(Rcorrj)[0]))
+plot.annotate('Stot = '+str(int(Stot))+' cps/MBq \n'+ \
+                r'$\mu_M$ = '+str(um)+r' $ mm^-$'+r'$^1$', xy=(1.5, Rcorrj[0] / tracer_activity))
 
 plot.show()
         
