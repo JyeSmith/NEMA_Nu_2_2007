@@ -10,7 +10,7 @@ import matplotlib.pyplot as plot
 import Scatter_and_Randoms_lib as SR_lib
     
 ####################################################
-Dir = 'NEMAScatter/' 
+Dir = 'sinograms/' 
 InitialActivity = 1052
 i = 109 # images (planes)
 j = 45  # j = acquisition
