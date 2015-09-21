@@ -10,15 +10,11 @@ import matplotlib.pyplot as plot
 import Scatter_and_Randoms_lib as SR_lib
     
 ####################################################
-Dir = '/media/home/TOSHIBA EXT/NEMAScatter/' ## images need to be seperate folders numbered 1 through 5 (# of sleves)
-#SSRB_Prompts, SSRB_Randoms = SR_lib.SSRB(Dir+'uncompnemascatter_'+str(1)+'.s')
+Dir = 'sinograms/' 
 InitialActivity = 1052
-####################################################
-
-# [Plane, Angle, Bin]
-# [621, 168, 400]
 i = 109 # images (planes)
 j = 45  # j = acquisition
+####################################################
 
 RefImageHeader = SR_lib.InterfileHeader(Dir+'uncompnemascatter_1.s.hdr')
 
