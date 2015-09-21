@@ -6,7 +6,7 @@ Created on Thu Sep 03 18:28:58 2015
 
 NEMA NU 2-2007
 
-Set 'Dir' to path with vfiles. Sums all vfiles (typically 6) and processes all 6 points at once.
+Set 'PathDicom' to dir with dicom files. Can calculate FWHM of up to 3 points sources in a image.
 """
 
 import numpy as np
@@ -15,11 +15,15 @@ import matplotlib.pyplot as pyplot
 import NEMA_Resolution_lib as lib
 
 ####################################################
-Dir = "vFile/"
+Dir = "mMR vFile/" 
+
+## File naming convention below can be either 'nemaresolution_1_2x_000_000.v.hdr' 
+##                                         or '2007resolution_1_2x_000_000.v.hdr'.
+
 j = 6 # Number of acquisitions
 ####################################################
 
-RefImageHeader = lib.InterfileHeader(Dir+'nemaresolution_1_2x_000_000.v.hdr')
+RefImageHeader = lib.InterfileHeader(Dir+'2007resolution_1_2x_000_000.v.hdr')
 
 MatrixSizex = int(RefImageHeader.get('matrix size[1]:'))
 MatrixSizey = int(RefImageHeader.get('matrix size[2]:'))
@@ -34,15 +38,15 @@ ConstPixelSpacing = [x_scale, y_scale, slice_thickness]
 Image = np.zeros([MatrixSizex, MatrixSizey, i], dtype='<f4')
 
 for acquisition in range(j):
-    print 'Reading file = ', Dir+'nemaresolution_'+str(acquisition+1)+'_2x_000_000.v.hdr'
-    ImageHeader = lib.InterfileHeader(Dir+'nemaresolution_'+str(acquisition+1)+'_2x_000_000.v.hdr')
+    print 'Reading file = ', Dir+'2007resolution_'+str(acquisition+1)+'_2x_000_000.v.hdr'
+    ImageHeader = lib.InterfileHeader(Dir+'2007resolution_'+str(acquisition+1)+'_2x_000_000.v.hdr')
     DataFile = ImageHeader.get('!name of data file:')
     ImageVolume = np.fromfile(Dir+DataFile, dtype=np.dtype('<f4'), count=(MatrixSizex*MatrixSizey*i))
     ImageVolume.resize(i, MatrixSizex, MatrixSizey)
     for images in range(i):
         Image[:,:,images] += ImageVolume[images,:,:]
 
-fig = pyplot.figure()
+fig = pyplot.figure(0)
         
 ## Loop through for up to 3 points
 for points in range(6):
@@ -88,4 +92,4 @@ for points in range(6):
         
         ## Set that point source to zero in the image so it wont be selected again in the analysis.
         Image[MaxIndices[0]-int(pointx/2): pointx+MaxIndices[0]-int(pointx/2), MaxIndices[1]-int(pointy/2): pointy+MaxIndices[1]-int(pointy/2), MaxIndices[2]-int(pointz/2): pointz+MaxIndices[2]-int(pointz/2)] = 0
-        
+
