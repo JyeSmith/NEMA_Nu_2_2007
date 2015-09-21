@@ -1,0 +1,22 @@
+--------------------------------------------------------------------------------
+ 
+  Primary Report File: E:\Sinogram\TestExec\2007Sensitivity\2007Sensitivity.txt
+Secondary Report File: E:\Sinogram\TestExec\2007Sensitivity\2007Sensitivity_secondary.txt
+ 
+--------------------------------------------------------------------------------
+ 
+                       NEMA 2007 Sensitivity Test Results
+                               Scanner Model 2008
+                    Date Processed: Wed Jul 30 11:32:28 2014
+ 
+ 
+                               Nuclide :  F18
+             System Sensitivity (STOT) :     13155.7 cps/MBq
+                   Detector Efficiency :        1.32 %
+                          Effective mu :       0.048 cm^-1
+            Lower Level Discriminators :         430 keV
+            Upper Level Discriminators :         610 keV
+                      Initial Activity :       13.285 MBq
+                                                0.359 mCi
+ 
+                     Average Net Trues :      46107607.6 Counts

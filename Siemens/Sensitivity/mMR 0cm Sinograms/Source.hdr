@@ -1,0 +1,14 @@
+!INTERFILE:=
+%comment:=Source Header for 7.0
+%SMS-MI version number:=2.0
+isotope name:=F18
+isotope gamma halflife (sec):=6588.000000
+isotope branching factor:=0.970000
+%tracer injection date (yyyy:mm:dd):= 2014:07:30
+%tracer injection time (hh:mm:ss GMT+00:00):= 01:01:00
+tracer activity at time of injection (Bq):=13056190
+injected volume (ml):=0.0
+$source radius (cm) [2]:=0.0
+$source length (cm):=70
+$source mu (1/cm) [1]:=0.0
+AssayId:=Sens_B

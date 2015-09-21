@@ -8,6 +8,29 @@ Created on Sat Sep 12 13:44:49 2015
 import datetime
 import numpy as np
 
+
+class InterfileHeader:
+    def __init__(self, filename):
+        self.filename = filename
+        self.tag = []
+        self.value = []
+        
+        with open(self.filename) as f:
+            for line in f:
+                line = line.strip()
+                parts = line.split("=")
+                if parts[0]:
+                    self.tag.append(parts[0])
+                    if parts[1]:
+                        self.value.append(parts[1])
+                    else:
+                        self.value.append('')
+    
+    def get(self, gettag):
+        for x in range(len(self.tag)):
+            if self.tag[x] == gettag:
+                return self.value[x]
+                
 def diff_times_in_mins(CalTime, AcqTime):
     # caveat emptor - assumes t1 & t2 are python times, on the same day and t2 is after t1
     t1 = datetime.datetime.strptime( str(CalTime), '%H:%M:%S').time()

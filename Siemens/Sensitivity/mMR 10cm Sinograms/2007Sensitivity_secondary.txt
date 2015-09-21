@@ -1,0 +1,210 @@
+--------------------------------------------------------------------------------
+ 
+  Primary Report File: E:\Sinogram\TestExec\2007Sensitivity_10cm\2007Sensitivity.txt
+Secondary Report File: E:\Sinogram\TestExec\2007Sensitivity_10cm\2007Sensitivity_secondary.txt
+ 
+--------------------------------------------------------------------------------
+ 
+                       NEMA 2007 Sensitivity Test Results
+                               Scanner Model 2008
+                    Date Processed: Wed Jul 30 12:03:47 2014
+ 
+                               Nuclide :        F18
+                    Branching Fraction :      0.9700
+                             Half Life :     6588.00 s
+ 
+ 
+ 
+        Frame Number :  1
+     Sinogram Header :  E:\Sinogram\TestExec\2007Sensitivity_10cm\2007Sensitivity_1.s.hdr
+  SSRB Sinogram Size :  344 x 252 x 127
+          Raw Counts :  37488843.0
+          Count Rate :    124962.8
+Corrected Count Rate :    154684.8
+   Starting Activity :     0.29 mCi
+            Duration :  300 s
+           Net Trues :    37488843 Counts
+        Elapsed Time :  0 s (From Start Of 1st Frame)
+ 
+ 
+        Frame Number :  2
+     Sinogram Header :  E:\Sinogram\TestExec\2007Sensitivity_10cm\2007Sensitivity_2.s.hdr
+  SSRB Sinogram Size :  344 x 252 x 127
+          Raw Counts :  37592413.0
+          Count Rate :    125308.0
+Corrected Count Rate :    161049.1
+   Starting Activity :     0.27 mCi
+            Duration :  300 s
+           Net Trues :    37592413 Counts
+        Elapsed Time :  357 s (From Start Of 1st Frame)
+ 
+ 
+        Frame Number :  3
+     Sinogram Header :  E:\Sinogram\TestExec\2007Sensitivity_10cm\2007Sensitivity_3.s.hdr
+  SSRB Sinogram Size :  344 x 252 x 127
+          Raw Counts :  37519750.0
+          Count Rate :    125065.8
+Corrected Count Rate :    166995.6
+   Starting Activity :     0.26 mCi
+            Duration :  300 s
+           Net Trues :    37519750 Counts
+        Elapsed Time :  720 s (From Start Of 1st Frame)
+ 
+ 
+        Frame Number :  4
+     Sinogram Header :  E:\Sinogram\TestExec\2007Sensitivity_10cm\2007Sensitivity_4.s.hdr
+  SSRB Sinogram Size :  344 x 252 x 127
+          Raw Counts :  37612928.0
+          Count Rate :    125376.4
+Corrected Count Rate :    173781.4
+   Starting Activity :     0.25 mCi
+            Duration :  300 s
+           Net Trues :    37612928 Counts
+        Elapsed Time :  1075 s (From Start Of 1st Frame)
+ 
+ 
+        Frame Number :  5
+     Sinogram Header :  E:\Sinogram\TestExec\2007Sensitivity_10cm\2007Sensitivity_5.s.hdr
+  SSRB Sinogram Size :  344 x 252 x 127
+          Raw Counts :  37836910.0
+          Count Rate :    126123.0
+Corrected Count Rate :    181354.8
+   Starting Activity :     0.25 mCi
+            Duration :  300 s
+           Net Trues :    37836910 Counts
+        Elapsed Time :  1424 s (From Start Of 1st Frame)
+ 
+ 
+Assay Corrected Rate :  
+  System Sensitivity :     14423.6 cps/MBq
+ 
+ 
+Plane        cps/MBq
+ 
+    0          2.599
+    1          6.312
+    2         10.184
+    3         14.193
+    4         18.430
+    5         21.967
+    6         25.949
+    7         28.885
+    8         31.600
+    9         35.412
+   10         38.871
+   11         42.773
+   12         46.921
+   13         50.342
+   14         54.444
+   15         57.458
+   16         60.099
+   17         64.098
+   18         67.208
+   19         71.224
+   20         75.847
+   21         79.735
+   22         83.544
+   23         86.771
+   24         89.213
+   25         93.132
+   26         96.880
+   27        100.600
+   28        104.406
+   29        107.755
+   30        112.343
+   31        115.169
+   32        117.765
+   33        121.452
+   34        125.288
+   35        128.629
+   36        132.548
+   37        136.072
+   38        140.350
+   39        142.939
+   40        145.644
+   41        149.123
+   42        152.449
+   43        156.212
+   44        159.585
+   45        162.918
+   46        167.203
+   47        170.114
+   48        172.561
+   49        175.677
+   50        178.164
+   51        182.363
+   52        185.627
+   53        189.983
+   54        193.140
+   55        196.918
+   56        198.745
+   57        202.508
+   58        204.616
+   59        207.874
+   60        212.189
+   61        210.091
+   62        213.857
+   63        210.649
+   64        213.997
+   65        209.761
+   66        211.987
+   67        207.951
+   68        204.168
+   69        202.221
+   70        199.180
+   71        197.125
+   72        193.872
+   73        189.478
+   74        185.589
+   75        181.958
+   76        178.162
+   77        174.909
+   78        171.034
+   79        169.301
+   80        166.049
+   81        162.441
+   82        158.186
+   83        154.287
+   84        150.199
+   85        146.997
+   86        143.813
+   87        141.654
+   88        138.163
+   89        134.325
+   90        130.423
+   91        126.054
+   92        123.742
+   93        119.872
+   94        116.038
+   95        113.695
+   96        111.238
+   97        107.009
+   98        103.607
+   99         99.553
+  100         95.812
+  101         92.357
+  102         88.894
+  103         86.219
+  104         83.057
+  105         78.775
+  106         75.226
+  107         70.977
+  108         66.939
+  109         63.317
+  110         60.029
+  111         56.954
+  112         54.116
+  113         50.305
+  114         47.096
+  115         42.729
+  116         38.734
+  117         35.350
+  118         31.603
+  119         28.759
+  120         26.145
+  121         22.328
+  122         18.327
+  123         14.423
+  124         10.352
+  125          6.452
+  126          2.698
