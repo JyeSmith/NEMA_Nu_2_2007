@@ -65,7 +65,6 @@ for acquisition in range(j):
     for image in range(i):
         RROIij[image, acquisition] = np.sum(mask * ImageVolume[image,:,:])
 
-#RROIij *= VoxelVolume
 
 for acquisition in range(j):
     for image in range(i):
